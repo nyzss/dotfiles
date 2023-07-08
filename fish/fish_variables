@@ -1,9 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export BROWSER:/usr/bin/google\x2dchrome\x2dstable
-SETUVAR --export GOOGLE_API_KEY:AIzaSyBKaaTRQNKxd78GVvdlHNxROjcFIjyEtPA
-SETUVAR --export GOOGLE_DEFAULT_CLIENT_ID:1028380720320\x2d4dgg5gi1562n8iene2qn8cbnhg97p2hq\x2eapps\x2egoogleusercontent\x2ecom
-SETUVAR --export GOOGLE_DEFAULT_CLIENT_SECRET:GOCSPX\x2dY\x2dHqZY8GnVjQnYVLVijqQL5RuTcV
 SETUVAR --export STARSHIP_CONFIG:/home/zheng/\x2econfig/starship/starship\x2etoml
 SETUVAR --export TERMINAL:/usr/bin/kitty
 SETUVAR __fish_initialized:3400
