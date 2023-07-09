@@ -9,6 +9,8 @@ echo "Backend: $backend";
 # $sh userReg-flags.sh -f 'John Smith' -a 25 -u john
 # echo "${foo:-"DefaultValueIfFooIsMissingOrEmpty"}"
 
+rm -rf $HOME/.cache/swww
+
 swww kill
 swww init
 swww img $wallpaper
@@ -17,7 +19,6 @@ swww img $wallpaper
 wal -c
 wal -i $wallpaper --backend ${backend:-"haishoku"}
 
-rm -rf $HOME/.cache/swww
 
 hyprctl reload
 
