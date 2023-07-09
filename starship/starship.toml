@@ -1,254 +1,91 @@
-# Setting the format of the prompt
-# format = """
-# $username\
-# $directory\
-# $all\
-# $character"""
-
-format = """
-$character \
-$all
-"""
-
-right_format = """$cmd_duration"""
-
 # Inserts a blank line between shell prompts
 add_newline = true
 
-# Making a single line prompt
-[line_break]
-disabled = true
+# Change command timeout from 500 to 1000 ms
+command_timeout = 1000
 
-# Replace the "❯" symbol in the prompt with "➜"
-[character] # The name of the module we are configuring is "character"
-# success_symbol = "[\\$](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
-success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
-# success_symbol = "[❯](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
-# success_symbol = "[>>>](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
-# success_symbol = "[»](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
-# success_symbol = "[>>>](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
-# success_symbol = "[λ](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
-error_symbol = "[✗](bold red) "
+# Change the default prompt format
+format = """  $all"""
+
+# Change the default prompt characters
+[character]
+success_symbol = ""
+error_symbol = ""
 
 
-# Disable the package module, hiding it from the prompt completely
-[package]
-disabled = true
-
-# Adding Battery status to the prompt
-[battery]
-#full_symbol = "🔋 "
-full_symbol = " "
-#charging_symbol = "⚡️ "
-charging_symbol = " "
-#discharging_symbol = "💀 "
-discharging_symbol = " "
-
-[[battery.display]] # "bold red" style and discharging_symbol when capacity is between 0% and 10%
-threshold = 10
-style = "bold red"
-
-[[battery.display]] # "bold yellow" style and 💦 symbol when capacity is between 10% and 30%
-threshold = 20
-style = "yellow"
-#discharging_symbol = " "
-discharging_symbol = " "
-
-# when capacity is over 30%, the battery indicator to be displayed
-#[[battery.display]] # "bold yellow" style and 💦 symbol when capacity is between 10% and 30%
-#threshold = 100
-#style = "green"
-#discharging_symbol = " " 
-
-# Setting Icons for git status
-[git_status]
-# style = "bold white"
-conflicted = "🏳"
-ahead = "🏎💨"
-behind = "😰"
-diverged = "😵"
-up_to_date = ""
-untracked = "🤷"
-stashed = "📦"
-modified = "📝"
-staged = '[++\($count\)](green)'
-renamed = "👅"
-deleted = "🗑"
-
-#style = "bold red"
-#conflicted = "✗"
-#ahead = ""
-#behind = ""
-#diverged = "✗"
-#up_to_date = ""
-#untracked = ""
-#stashed = "✗"
-#modified = "✗"
-#staged = "✗"
-#renamed = ""
-#deleted = ""
-##ahead = "⇡${count}"
-##diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-##behind = "⇣${count}"
-## format='([$all_status$ahead_behind]($style) )'
-#format='([$all_status]($style) )'
+# Shows the username
+[username]
+style_user = "green"
+style_root = "red"
+format = "[$user]($style) "
 disabled = false
-
-# Setting sudo icon
-
-#[sudo]
-#style = "bold green"
-#symbol = "👩‍💻 "
-#symbol = "🧙"
-#disabled = false
-
-
-# Setting time on the prompt
-
-[time]
-disabled = true
-format = ' [\[ $time \]]($style) '
-time_format = "%T"
-#utc_time_offset = "-5"
-time_range = "00:00:00-24:00:00"
-use_12hr = false
-style = "bold green"
-#time = 10:03:16
-
-[cmd_duration]
-min_time = 500
-format = "took [$duration](bold yellow)"
+show_always = true
 
 [hostname]
 ssh_only = false
-# format = "[$ssh_symbol](bold blue) on [$hostname](bold red) "
-format = "[$hostname](bold red) "
-# trim_at = ".companyname.com"
-disabled = true
-
-[username]
-#style_user = "white bold"
-style_user = "yellow bold"
-style_root = "black bold"
-format = "[$user]($style)@"
-#format = "[$user : ]($style)"
-# format = "[🚀 : ]($style)"
-disabled = true
-show_always = true
-
-[aws]
-disabled = true
-symbol = "  "
-
-[conda]
-disabled = true
-symbol = " "
-
-[cmake]
-disabled = true
-
-[cobol]
-disabled = true
-
-[dart]
-disabled = true
-symbol = " "
+format = "on [$hostname](blue) "
+disabled = false
 
 [directory]
-read_only = " "
 truncation_length = 1
-home_symbol = "~"
-#style = "bold orange"
-
-[docker_context]
-disabled = true
-symbol = " "
-
-[elixir]
-disabled = true
-symbol = " "
-
-[elm]
-disabled = true
-symbol = " "
+truncation_symbol = "../"
+home_symbol = " ~"
+read_only_style = "197"
+read_only = "  "
+format = "at [$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
-symbol = " "
-# format = "[$symbol$branch(:$remote_branch)]($style) "
-style = "bold italic red"
-format = "[git:](bold blue)[\\(](bold blue)[$branch(:$remote_branch)]($style)[\\)](bold blue) "
+symbol = " "
+format = "[$symbol$branch]($style) "
+# truncation_length = 4
+truncation_symbol = "…/"
+style = "bold green"
 
-[golang]
+[git_status]
+format = '[\($all_status$ahead_behind\)]($style) '
+style = "bold green"
+conflicted = "🏳"
+up_to_date = " "
+untracked = " "
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+stashed = " "
+modified = " "
+staged = '[++\($count\)](green)'
+renamed = "襁 "
+deleted = " "
+
+[kubernetes]
+format = 'via [ﴱ $context\($namespace\)](bold purple) '
+disabled = false
+
+# (deactivated because of no space left)
+[terraform]
+format = "via [ terraform $version]($style) 壟 [$workspace]($style) "
 disabled = true
-symbol = " "
 
-[haskell]
+[vagrant]
+format = "via [ vagrant $version]($style) "
 disabled = true
 
-[hg_branch]
+[docker_context]
+format = "via [ $context](bold blue) "
 disabled = true
-symbol = " "
 
-[java]
+[helm]
+format = "via [ $version](bold purple) "
 disabled = true
-symbol = " "
-
-[julia]
-disabled = true
-symbol = " "
-
-[memory_usage]
-disabled = true
-symbol = " "
-
-[nim]
-disabled = true
-symbol = " "
-
-[nix_shell]
-disabled = true
-symbol = " "
-
-[nodejs]
-disabled = true
-symbol = " "
-
-#[package]
-#symbol = " "
-
-[perl]
-disabled = true
-symbol = " "
-
-[php]
-disabled = true
-symbol = " "
 
 [python]
+symbol = " "
+python_binary = "python3"
 disabled = true
-#symbol = " "
-#symbol = "🐍 "
-#symbol = "👾 "
+
+[nodejs]
+format = "via [ $version](bold green) "
+disabled = true
 
 [ruby]
-disabled = true
-symbol = " "
-
-[rust]
-disabled = true
-symbol = " "
-
-[scala]
-disabled = true
-symbol = " "
-
-[shlvl]
-disabled = true
-symbol = " "
-
-[swift]
-disabled = true
-symbol = "ﯣ "
-
-[lua]
+format = "via [ $version]($style) "
 disabled = true
