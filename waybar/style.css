@@ -1,427 +1,313 @@
-/*
-@import "catppuccin/mocha.css";
-*/
-
-/*
-* Catppuccin Mocha palette
-*/
-
-/* @import "~()" */
 @import "/home/zheng/.cache/wal/colors-waybar.css";
 
-/* @define-color foreground #c5c5c5; */
-/* @define-color background #191a1a; */
-
-/* @define-color color1 #165b67; */
-/* @define-color color2 #32797f; */
-/* @define-color color3 #759d91; */
-/* @define-color color4 #88ab9f; */
-/* @define-color color5 #92bb87; */
-/* @define-color color6 #9cb8a6; */
-/* @define-color color7 #c5c5c5; */
-/* @define-color color8 #525353; */
-/* @define-color color9 #165b67; */
-/* @define-color color10 #32797f; */
-/* @define-color color11 #759d91; */
-/* @define-color color12 #88ab9f; */
-/* @define-color color13 #92bb87; */
-/* @define-color color14 #9cb8a6; */
-/* @define-color color15 #c5c5c5; */
-
-/* =============================== */
-/* Universal Styling */
 * {
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 17px;
+}
+
+window#waybar {
+  background-color: @background;
+  color: @foreground;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  border-top: 8px transparent;
+  border-radius: 8px;
+  transition-duration: 0.5s;
+  margin: 16px 16px;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  color: @color7;
+  background-color: transparent;
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each workspace name */
   border: none;
   border-radius: 0;
-  font-family: 'VictorMono Nerd Font', monospace;
-  font-weight: bold;
-  font-size: 14px;
-  min-height: 0;
 }
 
-/* =============================== */
-
-
-/* =============================== */
-/* Bar Styling */
-#waybar {
-  background: transparent;
-  color: @foreground;
+#workspaces button.focused {
+  color: #bf616a;
 }
 
-/* =============================== */
+#workspaces button.active {
+  color: @color3;
+}
 
+#workspaces button.urgent {
+  background-color: @color13;
+}
 
-/* =============================== */
-/* Main Modules */
-#custom-launcher,
-#workspaces,
-#window,
-#tray,
-#backlight,
+#window {
+  /* border-radius: 20px; */
+  /* padding-left: 10px; */
+  /* padding-right: 10px; */
+  color: @color15;
+}
+
 #clock,
 #battery,
-#pulseaudio,
-#network,
-#mpd,
 #cpu,
 #memory,
 #disk,
 #temperature,
-#custom-music,
-#custom-updates,
-#custom-nordvpn,
-#custom-notifications,
-#custom-power,
-#custom-custom,
-#custom-cycle_wall,
-#custom-clipboard,
-#custom-ss,
-#custom-weather {
-  background-color: @background;
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd,
+#bluetooth,
+#custom-hyprPicker,
+#custom-power-menu,
+#custom-spotify,
+#custom-weather,
+#custom-weather.severe,
+#custom-weather.sunnyDay,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.default {
+  padding: 0 10px;
   color: @foreground;
-  /* border-radius: 16px; */
-  padding: 0.5rem 1rem;
-  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
-  margin-top: 10px;
-  /*
-    margin-bottom: 10px;
-*/
-  margin-right: 10px;
+  /* color: #bf616a; */
+  border-radius: 9.5px;
+  background-color: @background;
 }
 
-/* =============================== */
-/* Launcher Module */
-#custom-launcher {
-  color: @color6;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-right: 10px;
-}
-
-/* =============================== */
-/* Workspaces */
+#window,
 #workspaces {
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-#workspaces * {
-  font-size: 0px;
-}
-
-#workspaces button {
-  background-color: @color8;
-  color: @color11;
-  border-radius: 100%;
-  min-height: 14px;
-  min-width: 14px;
-  margin: 5px 8px;
-  padding: 0px;
-  /*transition: all 0.5s cubic-bezier(0.33, 1.0, 0.68, 1.0); easeInOutCubic */
-  transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.68);
-  box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-}
-
-
-
-#workspaces button.active {
-  /*color: @surface0;
-    border-radius: 1rem;
-    padding: 0rem 10px;*/
-  background: radial-gradient(circle, rgba(203, 166, 247, 1) 0%, rgba(193, 168, 247, 1) 12%, rgba(249, 226, 175, 1) 19%, rgba(189, 169, 247, 1) 20%, rgba(182, 171, 247, 1) 24%, rgba(198, 255, 194, 1) 36%, rgba(177, 172, 247, 1) 37%, rgba(170, 173, 248, 1) 48%, rgba(255, 255, 255, 1) 52%, rgba(166, 174, 248, 1) 52%, rgba(160, 175, 248, 1) 59%, rgba(148, 226, 213, 1) 66%, rgba(155, 176, 248, 1) 67%, rgba(152, 177, 248, 1) 68%, rgba(205, 214, 244, 1) 77%, rgba(148, 178, 249, 1) 78%, rgba(144, 179, 250, 1) 82%, rgba(180, 190, 254, 1) 83%, rgba(141, 179, 250, 1) 90%, rgba(137, 180, 250, 1) 100%);
-  background-size: 400% 400%;
-  animation: gradient_f 20s ease-in-out infinite;
-  transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
-}
-
-#workspaces button:hover {
-  background-color: @color11;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 30%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes gradient_f {
-  0% {
-    background-position: 0% 200%;
-  }
-
-  50% {
-    background-position: 200% 0%;
-  }
-
-  100% {
-    background-position: 400% 200%;
-  }
-}
-
-@keyframes gradient_f_nh {
-  0% {
-    background-position: 0% 200%;
-  }
-
-  100% {
-    background-position: 200% 200%;
-  }
-}
-
-/* =============================== */
-
-
-/* =============================== */
-/* System Monitoring Modules */
-#cpu,
-#memory,
-#temperature {
-  color: @color1;
+  margin: 0 4px;
+  border-radius: 7.8px;
+  background-color: @background;
 }
 
 #cpu {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  margin-right: 0px;
-  padding-right: 5px;
+  color: @color1;
+  background-color: @background;
 }
 
 #memory {
-  /* border-radius: 0px; */
-  margin-right: 0px;
-  padding-left: 5px;
-  padding-right: 5px;
+  color: @color5;
+  background-color: @background;
 }
 
-#temperature {
-  /* border-radius: 0px; */
-  margin-right: 0px;
-  padding-left: 5px;
-  padding-right: 5px;
+#custom-power-menu {
+  border-radius: 9.5px;
+  background-color: @background;
+  border-radius: 7.5px;
+  padding: 0 5px;
 }
 
-#disk {
-  color: @color8;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  padding-left: 5px;
-  padding-right: 1rem;
+#custom-launcher {
+  background-color: @background;
+  color: @color3;
+  border-radius: 7.5px;
+  padding: 0 3px;
 }
 
-/* Updates Module */
-#custom-updates {
+#custom-weather.severe {
+  color: @color10;
+}
+
+#custom-weather.sunnyDay {
+  color: @color14;
+}
+
+#custom-weather.clearNight {
   color: @color4;
 }
 
-/* =============================== */
-
-
-/* =============================== */
-/* Clock Module */
-#clock {
-  color: @color13;
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight {
+  color: @color8;
 }
 
-/* =============================== */
-
-
-#custom-music.low {
-  background: rgb(148, 226, 213);
-  background: linear-gradient(52deg, rgba(148, 226, 213, 1) 0%, rgba(137, 220, 235, 1) 19%, rgba(116, 199, 236, 1) 43%, rgba(137, 180, 250, 1) 56%, rgba(180, 190, 254, 1) 80%, rgba(186, 187, 241, 1) 100%);
-  background-size: 300% 300%;
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
-  animation: gradient 15s ease infinite;
-  font-weight: bold;
-  color: #fff;
+#custom-weather.rainyDay,
+#custom-weather.rainyNight {
+  color: @color4;
 }
 
-#custom-music.random {
-  background: rgb(148, 226, 213);
-  background: radial-gradient(circle, rgba(148, 226, 213, 1) 0%, rgba(156, 227, 191, 1) 21%, rgba(249, 226, 175, 1) 34%, rgba(158, 227, 186, 1) 35%, rgba(163, 227, 169, 1) 59%, rgba(148, 226, 213, 1) 74%, rgba(164, 227, 167, 1) 74%, rgba(166, 227, 161, 1) 100%);
-  background-size: 400% 400%;
-  animation: gradient_f 4s ease infinite;
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
-  font-weight: bold;
-  color: #fff;
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight {
+  color: @color7;
 }
 
-#custom-music.critical {
-  background: rgb(235, 160, 172);
-  background: linear-gradient(52deg, rgba(235, 160, 172, 1) 0%, rgba(243, 139, 168, 1) 30%, rgba(231, 130, 132, 1) 48%, rgba(250, 179, 135, 1) 77%, rgba(249, 226, 175, 1) 100%);
-  background-size: 300% 300%;
-  animation: gradient 15s cubic-bezier(.55, -0.68, .48, 1.68) infinite;
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
-  font-weight: bold;
-  color: #fff;
+#custom-weather.default {
+  color: @color15;
 }
 
-#custom-music.Playing {
-  background: rgb(137, 180, 250);
-  background: radial-gradient(circle, rgba(137, 180, 250, 120) 0%, rgba(142, 179, 250, 120) 6%, rgba(148, 226, 213, 1) 14%, rgba(147, 178, 250, 1) 14%, rgba(155, 176, 249, 1) 18%, rgba(245, 194, 231, 1) 28%, rgba(158, 175, 249, 1) 28%, rgba(181, 170, 248, 1) 58%, rgba(205, 214, 244, 1) 69%, rgba(186, 169, 248, 1) 69%, rgba(195, 167, 247, 1) 72%, rgba(137, 220, 235, 1) 73%, rgba(198, 167, 247, 1) 78%, rgba(203, 166, 247, 1) 100%);
-  background-size: 400% 400%;
-  animation: gradient_f 9s cubic-bezier(.72, .39, .21, 1) infinite;
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
-  font-weight: bold;
-  color: #fff;
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
 }
 
-#custom-music.Paused,
-#custom-music.Stopped {
-  background: @background;
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
 }
 
-
-/* =============================== */
-/* Music/PlayerCTL Module */
-#custom-music {
-  color: @color11;
-}
-
-/* =============================== */
-
-
-/* =============================== */
-/* Network Module */
-#network {
-  color: @color1;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  margin-right: 0px;
-  padding-right: 5px;
-}
-
-/* =============================== */
-
-
-/* =============================== */
-/* PulseAudio Module */
 #pulseaudio {
-  color: @color11;
-  /* border-radius: 0; */
-  margin-right: 0px;
-  padding-left: 5px;
-  padding-right: 5px;
+  color: @color1;
 }
 
-/* =============================== */
-
-
-/* =============================== */
-/* Backlight Module */
 #backlight {
+  /* color: #EBCB8B; */
   color: @color5;
-  /* border-radius: 0; */
-  margin-right: 0px;
-  padding-left: 5px;
-  padding-right: 5px;
 }
 
-/* =============================== */
+#clock {
+  color: @color7;
+  /* background-color: #14141e; */
+}
 
-
-/* =============================== */
-/* Battery Module */
 #battery {
   color: @color6;
-  border-radius: 0;
-  margin-right: 0px;
-  padding-left: 5px;
-  padding-right: 5px;
+  /* background-color: #90b1b1; */
 }
 
-#battery.charging {
-  color: @color6;
+#battery.charging,
+#battery.full,
+#battery.plugged {
+  color: @color11;
+  /* background-color: #26a65b; */
 }
 
-#battery.warning:not(.charging) {
-  color: @color9;
+@keyframes blink {
+  to {
+    background-color: @background;
+    color: @color15;
+  }
 }
 
 #battery.critical:not(.charging) {
   color: @color10;
   animation-name: blink;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
-@keyframes blink {
-  to {
-    background: @color10;
-    color: @color8;
-  }
+label:focus {
+  background-color: #000000;
 }
 
-/* =============================== */
+#disk {
+  background-color: @color1;
+}
 
-/* Notifications Module */
-#custom-notifications {
+#bluetooth {
   color: @color11;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  padding-left: 5px;
-  padding-right: 1.25rem;
 }
 
-
-/* =============================== */
-/* Tray Module */
-#tray {
-  color: @color11;
-  padding-right: 1.25rem;
-}
-
-/* =============================== */
-
-
-/* =============================== */
-/* |       Custom Modules        | */
-/* =============================== */
-#custom-custom {
+#bluetooth.disconnected {
   color: @color8;
-  padding-right: 1.25rem;
-  margin-right: 0px;
 }
 
-/* Screenshot */
-#custom-ss {
+#network {
+  color: @color5;
+}
+
+#network.disconnected {
+  color: @color7;
+}
+
+#custom-media {
+  background-color: @color14;
+  color: @color10;
+  min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+  background-color: #66cc99;
+}
+
+#custom-media.custom-vlc {
+  background-color: #ffa000;
+}
+
+#temperature {
+  background-color: @color13;
+}
+
+#temperature.critical {
+  background-color: @color10;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
+
+#idle_inhibitor {
+  background-color: @background;
+}
+
+#idle_inhibitor.activated {
+  background-color: @foreground;
+  color: @color8;
+}
+
+#mpd {
   color: @color11;
-  padding-right: 1.5rem;
 }
 
-/* Wallpaper */
-#custom-cycle_wall {
-  background: linear-gradient(45deg, rgba(245, 194, 231, 1) 0%, rgba(203, 166, 247, 1) 0%, rgba(243, 139, 168, 1) 13%, rgba(235, 160, 172, 1) 26%, rgba(250, 179, 135, 1) 34%, rgba(249, 226, 175, 1) 49%, rgba(166, 227, 161, 1) 65%, rgba(148, 226, 213, 1) 77%, rgba(137, 220, 235, 1) 82%, rgba(116, 199, 236, 1) 88%, rgba(137, 180, 250, 1) 95%);
-  background-size: 500% 500%;
-  animation: gradient 7s linear infinite;
+#mpd.disconnected {
+  color: @color12;
 }
 
-/* Notifications Module */
-#custom-clipboard {
-  color: @color11;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  margin-right: 0px;
-  padding-right: 8px;
+#mpd.stopped {
+  color: @color14;
 }
 
-/* Powermenu Module */
-#custom-power {
-  color: @color11;
-  /* border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  padding-left: 8px; */
-  padding-right: 1.20rem;
+#mpd.paused {
+  color: @color14;
 }
 
-/* =============================== */
+#language {
+  background: @color1;
+  color: @color5;
+  padding: 0 5px;
+  margin: 0 5px;
+  min-width: 16px;
+}
+
+#keyboard-state {
+  background: @color3;
+  color: #000000;
+  padding: 0 0px;
+  margin: 0 5px;
+  min-width: 16px;
+}
+
+#keyboard-state > label {
+  padding: 0 5px;
+}
+
+#custom-spotify {
+  padding: 0 10px;
+  margin: 0 4px;
+  /* background-color: #1db954; */
+  color: @color7;
+}
+
+#keyboard-state > label.locked {
+  background: @foreground;
+}

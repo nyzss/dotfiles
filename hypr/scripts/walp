@@ -1,13 +1,21 @@
 #!/bin/bash
 
-wallpaper=${1-.}
-backend=${2-haishoku}
+default_wallpaper=`cat /home/zheng/.cache/wal/wal`
+default_backend=`cat /home/zheng/.cache/wal/backend`
+
+if [ -z "$default_backend" ]
+  then
+    default_backend=haishoku
+fi
+
+
+wallpaper=${1-$default_wallpaper}
+backend=${2-$default_backend}
+
+echo $backend > /home/zheng/.cache/wal/backend
 
 echo "wallpaper: $wallpaper";
 echo "Backend: $backend";
-
-# $sh userReg-flags.sh -f 'John Smith' -a 25 -u john
-# echo "${foo:-"DefaultValueIfFooIsMissingOrEmpty"}"
 
 rm -rf $HOME/.cache/swww
 
