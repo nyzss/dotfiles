@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/zheng/.config/wpg/wallpapers/jp_street_gruvbox-light_8_GaussianRBF_96_16.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#121315",
+        "foreground": "#dcd3be",
+        "cursor": "#dcd3be"
+    },
+    "colors": {
+        "color0": "#121315",
+        "color1": "#A16449",
+        "color2": "#738976",
+        "color3": "#A2936C",
+        "color4": "#C79F66",
+        "color5": "#718F81",
+        "color6": "#B8B08E",
+        "color7": "#dcd3be",
+        "color8": "#9a9385",
+        "color9": "#A16449",
+        "color10": "#738976",
+        "color11": "#A2936C",
+        "color12": "#C79F66",
+        "color13": "#718F81",
+        "color14": "#B8B08E",
+        "color15": "#dcd3be"
+    }
+}

@@ -1,16 +1,53 @@
 # Inserts a blank line between shell prompts
-add_newline = true
+# add_newline = true
 
 # Change command timeout from 500 to 1000 ms
 command_timeout = 1000
 
 # Change the default prompt format
-format = """  $all"""
+format = """
+󱙝 \
+$all"""
+
+###############
+# format = """
+# 󱙝 \
+# $os\
+# $username\
+# $hostname\
+# $directory\
+#
+#
+# """
+###########
+
+#
+# format = """
+# [░▒▓](#a3aed2)\
+# [  ](bg:#a3aed2 fg:#090c0c)\
+# [](bg:#769ff0 fg:#a3aed2)\
+# $directory\
+# [](fg:#769ff0 bg:#394260)\
+# $git_branch\
+# $git_status\
+# [](fg:#394260 bg:#212736)\
+# $nodejs\
+# $rust\
+# $golang\
+# $php\
+# [](fg:#212736 bg:#1d2230)\
+# $time\
+# [ ](fg:#1d2230)\
+# \n$character"""
+
+[os]
+style = "bg:#9A348E"
+disabled = true      # Disabled by default
 
 # Change the default prompt characters
-[character]
-success_symbol = ""
-error_symbol = ""
+# [character]
+# success_symbol = "󰸞"
+# error_symbol = ""
 
 
 # Shows the username
@@ -26,6 +63,13 @@ ssh_only = false
 format = "on [$hostname](blue) "
 disabled = false
 
+
+[time]
+disabled = true
+time_format = "%R"                                      # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+
 [directory]
 truncation_length = 1
 truncation_symbol = "../"
@@ -33,6 +77,13 @@ home_symbol = " ~"
 read_only_style = "197"
 read_only = "  "
 format = "at [$path]($style)[$read_only]($read_only_style) "
+
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
 
 [git_branch]
 symbol = " "

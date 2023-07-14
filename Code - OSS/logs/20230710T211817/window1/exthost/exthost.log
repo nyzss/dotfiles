@@ -1,0 +1,11 @@
+2023-07-10 21:18:18.665 [info] Extension host with pid 10603 started
+2023-07-10 21:18:18.665 [info] Skipping acquiring lock for /home/zheng/.config/Code - OSS/User/workspaceStorage/837b0cf6a710c55a9ce4ad9ab5a0a533.
+2023-07-10 21:18:18.755 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2023-07-10 21:18:18.764 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-07-10 21:18:18.768 [info] Eager extensions activated
+2023-07-10 21:18:18.769 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-07-10 21:18:18.771 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-07-10 21:18:20.766 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2023-07-10 21:18:37.701 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-07-10 22:10:41.598 [info] Extension host terminating: renderer closed the MessagePort
+2023-07-10 22:10:41.603 [info] Extension host with pid 10603 exiting with code 0

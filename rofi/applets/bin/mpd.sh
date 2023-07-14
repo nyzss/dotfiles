@@ -10,20 +10,20 @@ source "$HOME"/.config/rofi/applets/shared/theme.bash
 theme="$type/$style"
 
 # Theme Elements
-status="`mpc status`"
+status="`playerctl status`"
 if [[ -z "$status" ]]; then
 	prompt='Offline'
-	mesg="MPD is Offline"
+	mesg="Spotify is Offline"
 else
-	prompt="`mpc -f "%artist%" current`"
-	mesg="`mpc -f "%title%" current` :: `mpc status | grep "#" | awk '{print $3}'`"
+	prompt="`playerctl --player=spotify,%any metadata artist`"
+	mesg="`playerctl --player=spotify,%any metadata title` | `playerctl --player=spotify,%any metadata --format "{{duration(position)}} / {{ duration(mpris:length) }}"`"
 fi
 
 if [[ ( "$theme" == *'type-1'* ) || ( "$theme" == *'type-3'* ) || ( "$theme" == *'type-5'* ) ]]; then
 	list_col='1'
-	list_row='6'
+	list_row='4'
 elif [[ ( "$theme" == *'type-2'* ) || ( "$theme" == *'type-4'* ) ]]; then
-	list_col='6'
+	list_col='4'
 	list_row='1'
 fi
 
@@ -38,8 +38,6 @@ if [[ "$layout" == 'NO' ]]; then
 	option_2=" Stop"
 	option_3=" Previous"
 	option_4=" Next"
-	option_5=" Repeat"
-	option_6=" Random"
 else
 	if [[ ${status} == *"[playing]"* ]]; then
 		option_1=""
@@ -49,30 +47,15 @@ else
 	option_2=""
 	option_3=""
 	option_4=""
-	option_5=""
-	option_6=""
+	# option_5=""
+	# option_6=""
 fi
 
 # Toggle Actions
 active=''
 urgent=''
 # Repeat
-if [[ ${status} == *"repeat: on"* ]]; then
-    active="-a 4"
-elif [[ ${status} == *"repeat: off"* ]]; then
-    urgent="-u 4"
-else
-    option_5=" Parsing Error"
-fi
 # Random
-if [[ ${status} == *"random: on"* ]]; then
-    [ -n "$active" ] && active+=",5" || active="-a 5"
-elif [[ ${status} == *"random: off"* ]]; then
-    [ -n "$urgent" ] && urgent+=",5" || urgent="-u 5"
-else
-    option_6=" Parsing Error"
-fi
-
 # Rofi CMD
 rofi_cmd() {
 	rofi -theme-str "listview {columns: $list_col; lines: $list_row;}" \
@@ -93,15 +76,15 @@ run_rofi() {
 # Execute Command
 run_cmd() {
 	if [[ "$1" == '--opt1' ]]; then
-		mpc -q toggle && notify-send -u low -t 1000 " `mpc current`"
+		playerctl --player=spotify,%any play-pause
 	elif [[ "$1" == '--opt2' ]]; then
-		mpc -q stop
+		playerctl --player=spotify,%any play-pause
 	elif [[ "$1" == '--opt3' ]]; then
-		mpc -q prev && notify-send -u low -t 1000 " `mpc current`"
+		playerctl --player=spotify,%any previous
 	elif [[ "$1" == '--opt4' ]]; then
-		mpc -q next && notify-send -u low -t 1000 " `mpc current`"
+		playerctl --player=spotify,%any next
 	elif [[ "$1" == '--opt5' ]]; then
-		mpc -q repeat
+		playerctl --player=spotify,%any loop "on"
 	elif [[ "$1" == '--opt6' ]]; then
 		mpc -q random
 	fi

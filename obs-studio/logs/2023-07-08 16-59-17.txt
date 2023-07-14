@@ -1,0 +1,346 @@
+16:59:17.784: Platform: Wayland
+16:59:17.784: CPU Name: Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
+16:59:17.784: CPU Speed: 3545.040MHz
+16:59:17.784: Physical Cores: 4, Logical Cores: 8
+16:59:17.784: Physical Memory: 15833MB Total, 6297MB Free
+16:59:17.784: Kernel Version: Linux 6.4.1-arch2-1
+16:59:17.784: Distribution: "Arch Linux" Unknown
+16:59:17.784: Desktop Environment: Hyprland (hyprland)
+16:59:17.784: Session Type: wayland
+16:59:17.786: Qt Version: 6.5.1 (runtime), 6.5.1 (compiled)
+16:59:17.786: Portable mode: false
+16:59:17.825: OBS 29.1.3-1 (linux)
+16:59:17.825: ---------------------------------
+16:59:17.825: ---------------------------------
+16:59:17.826: audio settings reset:
+16:59:17.826: 	samples per sec: 48000
+16:59:17.826: 	speakers:        2
+16:59:17.826: 	max buffering:   960 milliseconds
+16:59:17.826: 	buffering type:  dynamically increasing
+16:59:17.827: ---------------------------------
+16:59:17.827: Initializing OpenGL...
+16:59:17.827: Using EGL/Wayland
+16:59:17.864: Initialized EGL 1.5
+16:59:17.880: Loading up OpenGL on adapter Intel Mesa Intel(R) UHD Graphics 630 (CFL GT2)
+16:59:17.880: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 23.1.3, shading language 4.60
+16:59:18.010: ---------------------------------
+16:59:18.010: video settings reset:
+16:59:18.010: 	base resolution:   1920x1080
+16:59:18.010: 	output resolution: 1280x720
+16:59:18.010: 	downscale filter:  Bicubic
+16:59:18.010: 	fps:               30/1
+16:59:18.010: 	format:            NV12
+16:59:18.010: 	YUV mode:          Rec. 709/Partial
+16:59:18.010: NV12 texture support not available
+16:59:18.010: P010 texture support not available
+16:59:18.016: Audio monitoring device:
+16:59:18.016: 	name: Default
+16:59:18.016: 	id: default
+16:59:18.016: ---------------------------------
+16:59:18.023: Failed to load 'en-US' text for module: 'decklink-captions.so'
+16:59:18.029: Failed to load 'en-US' text for module: 'decklink-output-ui.so'
+16:59:18.036: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+16:59:18.036: Failed to initialize module 'decklink.so'
+16:59:18.142: [pipewire] Available captures:
+16:59:18.142: [pipewire]     - Desktop capture
+16:59:18.168: v4l2loopback not installed, virtual camera disabled
+16:59:18.197: os_dlopen(libnvidia-encode.so.1->libnvidia-encode.so.1): libnvidia-encode.so.1: cannot open shared object file: No such file or directory
+16:59:18.197: 
+16:59:18.197: VAAPI: Failed to initialize display in vaapi_device_h264_supported
+16:59:18.198: VAAPI: Failed to initialize display in vaapi_device_h264_supported
+16:59:18.198: FFmpeg VAAPI H264 encoding not supported
+16:59:18.198: VAAPI: Failed to initialize display in vaapi_device_hevc_supported
+16:59:18.198: VAAPI: Failed to initialize display in vaapi_device_hevc_supported
+16:59:18.198: FFmpeg VAAPI HEVC encoding not supported
+16:59:18.275: ---------------------------------
+16:59:18.275:   Loaded Modules:
+16:59:18.275:     text-freetype2.so
+16:59:18.275:     rtmp-services.so
+16:59:18.275:     obs-x264.so
+16:59:18.275:     obs-vst.so
+16:59:18.275:     obs-transitions.so
+16:59:18.275:     obs-outputs.so
+16:59:18.275:     obs-libfdk.so
+16:59:18.275:     obs-filters.so
+16:59:18.275:     obs-ffmpeg.so
+16:59:18.276:     linux-v4l2.so
+16:59:18.276:     linux-pulseaudio.so
+16:59:18.276:     linux-pipewire.so
+16:59:18.276:     linux-jack.so
+16:59:18.276:     linux-capture.so
+16:59:18.276:     linux-alsa.so
+16:59:18.276:     image-source.so
+16:59:18.276:     frontend-tools.so
+16:59:18.276:     decklink-output-ui.so
+16:59:18.276:     decklink-captions.so
+16:59:18.276: ---------------------------------
+16:59:18.276: ==== Startup complete ===============================================
+16:59:18.284: No scene file found, creating default scene
+16:59:18.323: All scene data cleared
+16:59:18.324: ------------------------------------------------
+16:59:18.382: pulse-input: Server name: 'PulseAudio (on PipeWire 0.3.72) 15.0.0'
+16:59:18.382: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+16:59:18.382: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.3.analog-stereo.monitor' (default)
+16:59:18.383: pulse-input: Server name: 'PulseAudio (on PipeWire 0.3.72) 15.0.0'
+16:59:18.384: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+16:59:18.384: pulse-input: Started recording from 'alsa_input.pci-0000_00_1f.3.3.analog-stereo' (default)
+16:59:18.385: Switched to scene 'Scene'
+16:59:18.386: Failed to glob scene collections
+16:59:18.692: [rtmp-services plugin] Update file 'services.json' (version 227) rejected
+16:59:18.693: [rtmp-services plugin] Successfully updated package (version 227)
+16:59:18.999: adding 21 milliseconds of audio buffering, total audio buffering is now 21 milliseconds (source: Desktop Audio)
+16:59:18.999: 
+16:59:30.085: 
+16:59:30.085: ==== Auto-config wizard testing commencing ======
+
+16:59:30.116: Number of remaining views: 1
+16:59:30.116: ---------------------------------
+16:59:30.116: video settings reset:
+16:59:30.116: 	base resolution:   1920x1080
+16:59:30.116: 	output resolution: 1920x1080
+16:59:30.116: 	downscale filter:  Bicubic
+16:59:30.116: 	fps:               60/1
+16:59:30.116: 	format:            NV12
+16:59:30.116: 	YUV mode:          Rec. 709/Partial
+16:59:30.116: NV12 texture support not available
+16:59:30.116: P010 texture support not available
+16:59:30.123: ---------------------------------
+16:59:30.123: [x264 encoder: 'test_x264'] preset: veryfast
+16:59:30.123: [x264 encoder: 'test_x264'] profile: high
+16:59:30.123: [x264 encoder: 'test_x264'] settings:
+16:59:30.123: 	rate_control: CRF
+16:59:30.123: 	bitrate:      0
+16:59:30.123: 	buffer size:  0
+16:59:30.123: 	crf:          20
+16:59:30.123: 	fps_num:      60
+16:59:30.123: 	fps_den:      1
+16:59:30.123: 	width:        1920
+16:59:30.123: 	height:       1080
+16:59:30.123: 	keyint:       250
+16:59:30.123: 
+16:59:30.132: ---------------------------------
+16:59:30.132: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: stereo
+16:59:30.132: 
+16:59:35.134: Output 'null': stopping
+16:59:35.134: Output 'null': Total frames output: 245
+16:59:35.134: Output 'null': Total drawn frames: 300
+16:59:35.251: Video stopped, number of skipped frames due to encoding lag: 216/290 (74.5%)
+16:59:35.407: Number of remaining views: 1
+16:59:35.407: ---------------------------------
+16:59:35.407: video settings reset:
+16:59:35.407: 	base resolution:   1920x1080
+16:59:35.407: 	output resolution: 1920x1080
+16:59:35.407: 	downscale filter:  Bicubic
+16:59:35.407: 	fps:               30/1
+16:59:35.407: 	format:            NV12
+16:59:35.407: 	YUV mode:          Rec. 709/Partial
+16:59:35.407: NV12 texture support not available
+16:59:35.407: P010 texture support not available
+16:59:35.411: ---------------------------------
+16:59:35.411: [x264 encoder: 'test_x264'] preset: veryfast
+16:59:35.411: [x264 encoder: 'test_x264'] profile: high
+16:59:35.411: [x264 encoder: 'test_x264'] settings:
+16:59:35.411: 	rate_control: CRF
+16:59:35.411: 	bitrate:      0
+16:59:35.411: 	buffer size:  0
+16:59:35.411: 	crf:          20
+16:59:35.411: 	fps_num:      30
+16:59:35.411: 	fps_den:      1
+16:59:35.411: 	width:        1920
+16:59:35.411: 	height:       1080
+16:59:35.411: 	keyint:       250
+16:59:35.411: 
+16:59:35.423: ---------------------------------
+16:59:35.423: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: stereo
+16:59:35.423: 
+16:59:40.428: Output 'null': stopping
+16:59:40.428: Output 'null': Total frames output: 112
+16:59:40.428: Output 'null': Total drawn frames: 150
+16:59:40.507: Video stopped, number of skipped frames due to encoding lag: 39/142 (27.5%)
+16:59:40.678: Number of remaining views: 1
+16:59:40.678: ---------------------------------
+16:59:40.678: video settings reset:
+16:59:40.678: 	base resolution:   1920x1080
+16:59:40.678: 	output resolution: 1280x720
+16:59:40.678: 	downscale filter:  Bicubic
+16:59:40.678: 	fps:               60/1
+16:59:40.678: 	format:            NV12
+16:59:40.678: 	YUV mode:          Rec. 709/Partial
+16:59:40.678: NV12 texture support not available
+16:59:40.678: P010 texture support not available
+16:59:40.681: ---------------------------------
+16:59:40.681: [x264 encoder: 'test_x264'] preset: veryfast
+16:59:40.681: [x264 encoder: 'test_x264'] profile: high
+16:59:40.681: [x264 encoder: 'test_x264'] settings:
+16:59:40.681: 	rate_control: CRF
+16:59:40.681: 	bitrate:      0
+16:59:40.681: 	buffer size:  0
+16:59:40.681: 	crf:          20
+16:59:40.681: 	fps_num:      60
+16:59:40.681: 	fps_den:      1
+16:59:40.681: 	width:        1280
+16:59:40.681: 	height:       720
+16:59:40.681: 	keyint:       250
+16:59:40.681: 
+16:59:40.686: ---------------------------------
+16:59:40.686: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: stereo
+16:59:40.686: 
+16:59:45.687: Output 'null': stopping
+16:59:45.687: Output 'null': Total frames output: 264
+16:59:45.687: Output 'null': Total drawn frames: 300
+16:59:45.713: Video stopped, number of skipped frames due to encoding lag: 48/294 (16.3%)
+16:59:45.782: Number of remaining views: 1
+16:59:45.782: ---------------------------------
+16:59:45.782: video settings reset:
+16:59:45.782: 	base resolution:   1920x1080
+16:59:45.782: 	output resolution: 1280x720
+16:59:45.782: 	downscale filter:  Bicubic
+16:59:45.782: 	fps:               30/1
+16:59:45.782: 	format:            NV12
+16:59:45.782: 	YUV mode:          Rec. 709/Partial
+16:59:45.782: NV12 texture support not available
+16:59:45.782: P010 texture support not available
+16:59:45.786: ---------------------------------
+16:59:45.786: [x264 encoder: 'test_x264'] preset: veryfast
+16:59:45.786: [x264 encoder: 'test_x264'] profile: high
+16:59:45.786: [x264 encoder: 'test_x264'] settings:
+16:59:45.786: 	rate_control: CRF
+16:59:45.786: 	bitrate:      0
+16:59:45.786: 	buffer size:  0
+16:59:45.786: 	crf:          20
+16:59:45.786: 	fps_num:      30
+16:59:45.786: 	fps_den:      1
+16:59:45.786: 	width:        1280
+16:59:45.786: 	height:       720
+16:59:45.786: 	keyint:       250
+16:59:45.786: 
+16:59:45.788: ---------------------------------
+16:59:45.788: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: stereo
+16:59:45.788: 
+16:59:50.788: Output 'null': stopping
+16:59:50.789: Output 'null': Total frames output: 123
+16:59:50.789: Output 'null': Total drawn frames: 150
+16:59:50.853: Number of remaining views: 1
+16:59:50.853: ---------------------------------
+16:59:50.853: video settings reset:
+16:59:50.853: 	base resolution:   1920x1080
+16:59:50.853: 	output resolution: 852x480
+16:59:50.853: 	downscale filter:  Bicubic
+16:59:50.853: 	fps:               60/1
+16:59:50.853: 	format:            NV12
+16:59:50.853: 	YUV mode:          Rec. 709/Partial
+16:59:50.853: NV12 texture support not available
+16:59:50.853: P010 texture support not available
+16:59:50.859: ---------------------------------
+16:59:50.859: [x264 encoder: 'test_x264'] preset: veryfast
+16:59:50.859: [x264 encoder: 'test_x264'] profile: high
+16:59:50.859: [x264 encoder: 'test_x264'] settings:
+16:59:50.859: 	rate_control: CRF
+16:59:50.859: 	bitrate:      0
+16:59:50.859: 	buffer size:  0
+16:59:50.859: 	crf:          20
+16:59:50.859: 	fps_num:      60
+16:59:50.859: 	fps_den:      1
+16:59:50.859: 	width:        852
+16:59:50.859: 	height:       480
+16:59:50.859: 	keyint:       250
+16:59:50.859: 
+16:59:50.862: ---------------------------------
+16:59:50.862: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: stereo
+16:59:50.862: 
+16:59:55.862: Output 'null': stopping
+16:59:55.862: Output 'null': Total frames output: 273
+16:59:55.862: Output 'null': Total drawn frames: 300
+16:59:55.892: Number of remaining views: 1
+16:59:55.892: ---------------------------------
+16:59:55.892: video settings reset:
+16:59:55.892: 	base resolution:   1920x1080
+16:59:55.892: 	output resolution: 852x480
+16:59:55.892: 	downscale filter:  Bicubic
+16:59:55.892: 	fps:               30/1
+16:59:55.892: 	format:            NV12
+16:59:55.892: 	YUV mode:          Rec. 709/Partial
+16:59:55.892: NV12 texture support not available
+16:59:55.892: P010 texture support not available
+16:59:55.898: ---------------------------------
+16:59:55.898: [x264 encoder: 'test_x264'] preset: veryfast
+16:59:55.898: [x264 encoder: 'test_x264'] profile: high
+16:59:55.898: [x264 encoder: 'test_x264'] settings:
+16:59:55.898: 	rate_control: CRF
+16:59:55.898: 	bitrate:      0
+16:59:55.898: 	buffer size:  0
+16:59:55.898: 	crf:          20
+16:59:55.898: 	fps_num:      30
+16:59:55.898: 	fps_den:      1
+16:59:55.898: 	width:        852
+16:59:55.898: 	height:       480
+16:59:55.898: 	keyint:       250
+16:59:55.898: 
+16:59:55.900: ---------------------------------
+16:59:55.901: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: stereo
+16:59:55.901: 
+17:00:00.901: Output 'null': stopping
+17:00:00.901: Output 'null': Total frames output: 123
+17:00:00.901: Output 'null': Total drawn frames: 150
+17:00:00.932: Number of remaining views: 1
+17:00:00.932: ---------------------------------
+17:00:00.932: video settings reset:
+17:00:00.932: 	base resolution:   1920x1080
+17:00:00.932: 	output resolution: 1280x720
+17:00:00.932: 	downscale filter:  Bicubic
+17:00:00.932: 	fps:               30/1
+17:00:00.932: 	format:            NV12
+17:00:00.932: 	YUV mode:          Rec. 709/Partial
+17:00:00.932: NV12 texture support not available
+17:00:00.932: P010 texture support not available
+17:00:08.708: Number of remaining views: 1
+17:00:08.708: ---------------------------------
+17:00:08.708: video settings reset:
+17:00:08.708: 	base resolution:   1920x1080
+17:00:08.708: 	output resolution: 1280x720
+17:00:08.708: 	downscale filter:  Bicubic
+17:00:08.708: 	fps:               30/1
+17:00:08.708: 	format:            NV12
+17:00:08.708: 	YUV mode:          Rec. 709/Partial
+17:00:08.708: NV12 texture support not available
+17:00:08.708: P010 texture support not available
+17:00:08.713: 
+17:00:08.713: ==== Auto-config wizard testing stopping ========
+
+17:00:26.509: PipeWire initialized
+17:00:26.513: User added source 'Screen Capture (PipeWire)' (pipewire-desktop-capture-source) to scene 'Scene'
+17:00:26.567: [pipewire] Screencast session created
+17:00:27.999: [pipewire] Asking for desktop
+17:00:28.025: [pipewire] desktop selected, setting up screencast
+17:00:28.212: [pipewire] Error retrieving pipewire fd: GDBus.Error:org.freedesktop.DBus.Error.NoReply: Message recipient disconnected from message bus without replying
+17:00:29.193: PipeWire initialized
+17:00:29.249: [pipewire] Screencast session created
+17:00:32.451: [pipewire] Asking for desktop
+17:00:32.476: [pipewire] desktop selected, setting up screencast
+17:00:32.482: [pipewire] Server version: 0.3.72
+17:00:32.482: [pipewire] Library version: 0.3.73
+17:00:32.482: [pipewire] Header version: 0.3.72
+17:00:32.482: [pipewire] Created stream 0x556b1a8da5f0
+17:00:32.482: [pipewire] Stream 0x556b1a8da5f0 state: "connecting" (error: none)
+17:00:32.482: [pipewire] Playing stream 0x556b1a8da5f0
+17:00:32.483: [pipewire] Stream 0x556b1a8da5f0 state: "paused" (error: none)
+17:00:32.485: [pipewire] Negotiated format:
+17:00:32.485: [pipewire]     Format: 8 (Spa:Enum:VideoFormat:BGRx)
+17:00:32.485: [pipewire]     Modifier: 0x0
+17:00:32.485: [pipewire]     Size: 1920x1080
+17:00:32.485: [pipewire]     Framerate: 0/1
+17:00:32.488: [pipewire] Negotiated format:
+17:00:32.488: [pipewire]     Format: 8 (Spa:Enum:VideoFormat:BGRx)
+17:00:32.488: [pipewire]     Modifier: 0x100000000000004
+17:00:32.488: [pipewire]     Size: 1920x1080
+17:00:32.488: [pipewire]     Framerate: 0/1
+17:00:32.522: [pipewire] Stream 0x556b1a8da5f0 state: "streaming" (error: none)
+17:01:05.530: pulse-input: Server name: 'PulseAudio (on PipeWire 0.3.72) 15.0.0'
+17:01:05.531: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+17:01:05.531: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.3.analog-stereo.monitor' (default)
+17:01:05.533: User added source 'Audio Output Capture (PulseAudio)' (pulse_output_capture) to scene 'Scene'
+17:01:08.548: pulse-input: Stopped recording from 'default'
+17:01:08.548: pulse-input: Got 115 packets with 138000 frames
+17:01:08.549: pulse-input: Server name: 'PulseAudio (on PipeWire 0.3.72) 15.0.0'
+17:01:08.549: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+17:01:08.550: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.3.analog-stereo.monitor' (default)

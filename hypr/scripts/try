@@ -1,0 +1,7 @@
+#!/bin/bash
+
+default=`cat /home/zheng/.cache/wal/wal`
+this_try=${1-$value}
+
+echo $this_try
+echo $value

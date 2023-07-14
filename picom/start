@@ -1,0 +1,8 @@
+
+#!/bin/bash
+
+killall picom
+sleep 0.1
+#picom --config ~/.config/picom/picom.conf
+picom --experimental-backends -b --config ~/.config/picom/picom.conf
+
