@@ -206,23 +206,24 @@ wmname = "LG3D"
 # @hook.subscribe.startup_once
 # def autostart_once():
 #     subprocess.run("/home/zheng/.config/qtile/autostart.sh")
-#
-# @hook.subscribe.startup_once
-# def autostart():
-#     processes = [
-#         ["nitrogen", "--restore"],
-#         ["/home/zheng/.config/qtile/mouse_sensitivity.sh"],
-#         ["/home/zheng/.config/picom/start"],
-#         ["polybar"],
-#     ]
-#
-#     for p in processes:
-#         subprocess.Popen(p)
 
 
 @hook.subscribe.startup_once
-def autostart_once():
-    subprocess.run("/home/zheng/.config/qtile/autostart.sh")
+def autostart():
+    processes = [
+        ["nitrogen", "--restore"],
+        ["/home/zheng/.config/qtile/mouse_sensitivity.sh"],
+        ["/home/zheng/.config/picom/start"],
+        ["polybar"],
+    ]
+
+    for p in processes:
+        subprocess.Popen(p)
+
+
+# @hook.subscribe.startup_once
+# def autostart_once():
+#     subprocess.run("/home/zheng/.config/qtile/autostart.sh")
 
 
 # @hook.subscribe.startup_once
