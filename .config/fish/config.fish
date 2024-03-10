@@ -14,6 +14,7 @@ alias icat "kitten icat"
 
 alias nvim "nvim +'set noet'"
 
+set -gx BAT_THEME "base16"
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -gx MANROFFOPT "-c"
 
