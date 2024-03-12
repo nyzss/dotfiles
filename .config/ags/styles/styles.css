@@ -1,6 +1,9 @@
+/* @import url("./color.css"); */
+/* @import url(""); */
+
 window {
-	font-family: "Iosevka Nerd Font";
-	font-size: 20px;
+	/* font-family: "Iosevka Nerd Font"; */
+	font-size: 18px;
 }
 
 #bar1 {
@@ -23,4 +26,20 @@ window {
 
 	background-color: cyan;
 	color: red;
+}
+
+.workspace {
+	font-family: "Iosevka Nerd Font";
+	padding: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 21px;
+	border-radius: 0;
+	background: #3550AF;
+	color: #FFF;
+	border: none;
+}
+
+.active {
+	background: #3550FF;
 }

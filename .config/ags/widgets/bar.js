@@ -1,5 +1,6 @@
 // import { battery } from "resource:///com/github/Aylur/ags/service/battery.js";
 
+const hyprland = await Service.import("hyprland")
 const battery = await Service.import("battery")
 const audio = await Service.import("audio")
 
@@ -32,6 +33,25 @@ const Battery = () => {
             Widget.Icon({ icon }),
             Widget.Label({ label: value.as(n => n.toString()), class_name: "indicator" })
         ]
+    })
+}
+
+const Workspaces = () => {
+
+    const active = hyprland.active.workspace.bind("id");
+    const workspaces = hyprland.bind("workspaces").as(ws => ws.map(({ id, name }) => {
+        const label = Widget.Label({
+            label: name
+        })
+        return Widget.Button({
+            child: label,
+            on_clicked: () => hyprland.messageAsync(`dispatch workspace ${id}`),
+            class_name: active.as(a => `${a === id ? "active workspace" : "workspace"}`)
+        })
+    }))
+
+    return Widget.Box({
+        children: workspaces
     })
 }
 
@@ -79,6 +99,14 @@ const right_wid = Widget.Box({
     children: [Volume(), Battery(), Date()]
 })
 
+const CurrentClient = () => {
+    const client = hyprland.active.client.bind("title");
+
+    return Widget.Label({
+        label: client
+    })
+}
+
 const Bar = (monitor) => {
     return Widget.Window({
         monitor: monitor,
@@ -86,11 +114,8 @@ const Bar = (monitor) => {
         anchor: ['top', 'left', 'right'],
         exclusivity: 'exclusive',
         child: Widget.CenterBox({
-            start_widget: wid,
-            center_widget: Widget.Label({
-                hpack: 'center',
-                label: date.bind(),
-            }),
+            start_widget: Workspaces(),
+            center_widget: CurrentClient(),
             endWidget: right_wid
         }),
     });
