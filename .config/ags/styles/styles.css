@@ -1,0 +1,26 @@
+window {
+	font-family: "Iosevka Nerd Font";
+	font-size: 20px;
+}
+
+#bar1 {
+	background-color: #355077;
+	color: #FFFFFF;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	/* height: 40px; */
+}
+
+.right {
+	margin-right: 24px;
+}
+
+.indicator {
+	font-size: 18px;
+}
+
+.volume {
+
+	background-color: cyan;
+	color: red;
+}
