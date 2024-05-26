@@ -23,5 +23,9 @@ set -gx BROWSER google-chrome-stable
 # Alternative (blocks terminal for 0-3ms)
 cat ~/.cache/wal/sequences
 
+alias francinette=/home/nyzs/francinette/tester.sh
+
+alias paco=/home/nyzs/francinette/tester.sh
+
 # To add support for TTYs this line can be optionally added.
 #source ~/.cache/wal/colors-tty.sh
